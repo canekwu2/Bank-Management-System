@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203b.assignments.ifinance.CustomAccountGroupsController">
+   <children>
+      <TreeView fx:id="treeView" layoutX="30.0" layoutY="70.0" onContextMenuRequested="#contextMenuRequested" prefHeight="370.0" prefWidth="300.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="addSelect" mnemonicParsing="false" onAction="#addNewGroupClicked" text="Add New Group" />
+                  <MenuItem fx:id="changeNameSelect" mnemonicParsing="false" onAction="#modifyGroupClicked" text="Change Group Name" />
+                  <MenuItem fx:id="deleteSelect" mnemonicParsing="false" onAction="#DeleteGroupClicked" text="Delete Group" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
+      <TitledPane alignment="TOP_CENTER" layoutX="343.0" layoutY="70.0" prefHeight="300.0" prefWidth="220.0" text="Add or Change Group Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <content>
+            <AnchorPane prefHeight="300.0" prefWidth="220.0">
+               <children>
+                  <TextField fx:id="text" layoutX="29.0" layoutY="47.0" />
+                  <Button fx:id="save" layoutX="139.0" layoutY="137.0" mnemonicParsing="false" onAction="#addNewGroup" prefHeight="30.0" prefWidth="50.0" text="save" />
+                  <Label layoutX="29.0" layoutY="14.0" text="Group Name" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="343.0" layoutY="407.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="220.0" text="Exit" />
+      <Label layoutX="180.0" layoutY="28.0" text="Custom Accounts Group Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
